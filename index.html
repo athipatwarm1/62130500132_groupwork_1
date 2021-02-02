@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Basic Vue Js - HelloWorld App</title>
+  <title>TailwindCSSLearning01</title>
 
   <!-- https://google.github.io/material-design-icons/#icon-font-for-the-web -->
   <!-- Using via Google Web Fonts -->
@@ -14,19 +14,215 @@
   <!-- Using Tailwind via CDN -->
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
 
+  <!--IconMonstrCDN-->
+  <link href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" rel="stylesheet"/>
+  
+  <!--W3-->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <!--FontAwesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
   <!-- https://v3.vuejs.org/guide/installation.html#release-notes -->
   <!-- Vue CDN -->
   <script src="https://unpkg.com/vue@next"></script>
 
 </head>
-
+<style>
+  .sticky {
+    position:fixed;
+    width: 100%;
+    background-color: white;
+  }
+  #shead:hover{
+    color: red;
+  }
+  #fea:hover{
+    color:grey;
+    text-decoration-line: underline;
+  }
+  #more {
+    color: red;
+  }
+  #more:hover{
+    color: grey;
+  }
+  #vtext{
+    font-family: Fantasy;
+    color: grey;
+  }
+  #newstd{
+    color:grey;
+  }
+  #newst:hover{
+    text-decoration-line: underline;
+  }
+  #foot{
+    color: white;
+  }
+  #fm:hover{
+    text-decoration-line: underline;
+  }
+  #fm{
+    display: inline;
+    padding:16px;
+  }
+  #si{
+    display: inline;
+    padding:10px;
+  }
+</style>
 <body>
-  <div id="app" class="h-screen w-full bg-gray-200 flex items-start justify-start">
-    <img src="./images/1.jpg" class="w-1/3 h-full">
-    <div class="w-full flex items-center justify-end">
-      <i class="material-icons">face</i>
-      <p class="font-semibold text-xl tracking-wider uppercase px-3"> {{ msg }}</p>
+  <div class="p-3 border-b-8 border-red-500 flex flex-row" id="StickHeader">
+    <div class="pl-8 pr-8" id="logo">
+      <p class="w-14 h-14"><a href="https://www.bandai.com/">
+        <img src="images/bandailogo.png" alt="bandai">
+      </a></p>
     </div>
+
+    <div class="font-sans text-xl ml-auto mr-10 my-auto" id="main-menu">
+      <div id="menu">
+        <ul class="flex flex-row space-x-12">
+          <li id="shead"><a href=""> Brands </a></li>
+          <li id="shead"><a href=""> Premium Bandai </a></li>
+          <li id="shead"><a href=""> Support </a></li>
+          <li id="shead"><a href=""> Foundation </a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ml-auto mr-10 my-auto" id="social">
+      <div id="social-menu">
+        <ul class="flex flex-row space-x-6">
+          <li><a href=""><i class="im im-twitter"></i></a></li>
+          <li><a href=""><i class="im im-facebook"></i></a></li>
+          <li><a href=""><i class="im im-instagram"></i></a></li>
+          <li><a href=""><i class="im im-youtube"></i></a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>  
+
+  <div id="slide">
+    <div class="" id="display">
+      <ul>
+      <li class="slide"><a href=""><img src="images/banner1.jpg" class="w-full"></a></li>
+      <li class="slide"><a href=""><img src="images/banner2.jpg" class="w-full"></a></li>
+      <li class="slide"><a href=""><img src="images/banner3.jpg" class="w-full"></a></li>
+      <li class="slide"><a href=""><img src="images/banner4.jpg" class="w-full"></a></li>
+      </ul>
+      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+  </div>
+  
+  <div class="pt-16 pl-6" id="features">
+    <div class="">
+      <h2 class="uppercase pb-8 font-bold">Features Brands</h2>
+      <div class="mx-auto">
+        <div class="flex flex-row space-x-24 pb-24 px-auto pl-16 pr-16">
+          <div class="w-1/5 h-1/5 text-center">
+            <a href="" id="fea"><img src="images/fea1.jpg" class="shadow-2xl">
+              <br>Tamagotchi</a>
+          </div>
+          <div class="w-1/5 h-1/5 text-center">
+            <a href="" id="fea"><img src="images/fea2.jpg" class="shadow-2xl">
+              <br>Digimon</a>
+          </div>
+          <div class="w-1/5 h-1/5 text-center">
+            <a href="" id="fea"><img src="images/fea3.jpg" class="shadow-2xl">
+              <br>Dragon Ball Super</a>
+          </div>
+          <div class="w-1/5 h-1/5 text-center">
+            <a href="" id="fea"><img src="images/fea4.jpg" class="shadow-2xl">
+              <br>Anime Heroes</a>
+          </div>
+        </div>
+
+        <p id="more" class="uppercase pb-16 pl-6"><a href>more brands<i class="fas fa-arrow-circle-right pl-1"></i></a></p>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-yellow-400 pb-52" id="video">
+    <div class="w-6/12 h-4/12 pt-20 pl-12 pb-20"id="player">
+      <video controls class="float-left pr-16">
+        <source src="https://www.bandai.com/wp-content/uploads/Bandai-Website_Homepage_Compilation-Video_01.mp4#t=1">
+      </video>
+    </div>
+    <div id="text">
+      <p class="uppercase font-bold text-3xl" id="vtext">Lastest Video</p>
+      <br>
+      <p>
+        Check out our recent product releases and see what’s new in the Bandai world!
+      </p>
+      <br>
+      <p id="more" class="uppercase pb-16 pl-6 text-xl"><a href>more videos<i class="fas fa-arrow-circle-right pl-1"></i></a></p>
+    </div>
+  </div>
+
+  <div class="mt-24" id="news">
+    <div class="pl-12" id="content">
+      <p class="uppercase font-bold text-3xl pb-12" id="vtext">Lastest News</p>
+      <div class="mx-auto">
+        <div class="flex flex-row space-x-24 pb-24 px-auto pr-16">
+          <div class="w-2/5 h-2/5 ">
+            <a href=""><img src="images/news1.jpg"></a>
+              <br><p id="newstd">November 25, 2020</p><br>
+              <a href="" id="newst" class="text-xl">New Tamagotchi Introductions</a>
+          </div>
+          <div class="w-2/5 h-2/5 ">
+            <a href="" ><img src="images/news2.jpg"></a>
+              <br><p id="newstd">October 15, 2020</p><br>
+              <a href="" id="newst" class="text-xl">Bandai America Lands Four Products On The Toy Insider’s Top Holiday Toy List!</a>
+          </div>
+          <div class="w-2/5 h-2/5 ">
+            <a href="" ><img src="images/news3.jpg"></a>
+              <br><p id="newstd">October 1, 2020</p><br>
+              <a href="" id="newst" class="text-xl">Bandai America Partners with Sanrio® To Debut a New Hello Kitty® Tamagotchi</a>
+          </div>
+
+        </div>
+
+        <p id="more" class="uppercase pb-16"><a href>more news<i class="fas fa-arrow-circle-right pl-1"></i></a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-gray-500" id="foot">
+      <div class="pt-10" id="foot-menu">
+        <div id="fmenu">
+          <ul class="text-center">
+            <li id="fm"><a href=""> Brands </a></li>
+            <li id="fm"><a href=""> Support </a></li>
+            <li id="fm"><a href=""> About </a></li>
+            <li id="fm"><a href=""> News </a></li>
+            <li id="fm"><a href=""> Careers </a></li>
+            <li id="fm"><a href=""> Foundation </a></li>
+          </ul>
+        </div>
+        <div id="socialicon">
+          <ul class="text-center pt-10">
+            <li id="si"><a href=""><i class="im im-twitter"></i></a></li>
+            <li id="si"><a href=""><i class="im im-facebook"></i></a></li>
+            <li id="si"><a href=""><i class="im im-instagram"></i></a></li>
+            <li id="si"><a href=""><i class="im im-youtube"></i></a></li>
+          </ul>
+        </div>
+        <div class="pt-4 text-center">Bandai.com © 2020 Bandai America Incorporated.</div>
+        <div id="fmenu">
+          <ul class="text-center text-sm pt-4 pb-20">
+            <li id="fm"><a href=""> Privacy Policy </a></li>
+            <li id="fm"><a href=""> Children’s Privacy Policy </a></li>
+            <li id="fm"><a href=""> Terms & Conditions </a></li>
+            <li id="fm"><a href=""> Employee Notice for Personal Information </a></li>
+          </ul>
+        </div>
+      </div>
+
+    
   </div>
 
   <!-- my main.js -->
