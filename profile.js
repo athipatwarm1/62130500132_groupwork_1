@@ -8,7 +8,7 @@
                 head3: 'Rating',
                 data1: 39,
                 data2: 132,
-                data3: 3.98,
+                data3: 3.9,
                 left: 'dislike',
                 right: 'like',
                 image: '/images/profile.png'
