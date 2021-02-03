@@ -11,7 +11,7 @@
                 data3: '2',
                 left: 'dislike',
                 right: 'like',
-                image: '/images/tempura.png'
+                image: '/images/profile.png'
             }
         }
 
